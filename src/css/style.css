@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/*foundation*/
+@import "foundation/initialize.css";
+@import "foundation/properties.css";
+@import "foundation/mixin.css";
+@import "foundation/init.css";
+@import "foundation/util.css";
+/*layout*/
+@import "layout/header.css";
+@import "layout/footer.css";
+
+body{
+    overflow: hidden;
+}
+
+/*bg*/
+.bg{
+    background-image: url(../../assets/img/bg.jpg);
+    background-size: cover;
+    position: relative;
+    @mixin sp{
+        height: auto;
+        background-position: center top;
+    }
+    &:before{
+        content: ' ';
+        background-color: rgba(0,0,0,0.6);
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    }
+}
+
+canvas{
+    height: 100%;
+}
+
+/*content*/
+.content{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 2px;
+    overflow-y: scroll;
+}
+
+/*header*/
+.header{
+    color: #fff;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    margin-top: 60px;
+    height: 100%;
+    position: relative;
+    &__txt{
+        font-size: 40px;
+        letter-spacing: 2px;
+        @mixin sp{
+            font-size: 8vw;
+        }
+        &:last-child{
+            padding-top: 200px;
+        }
+
+    }
+    &__ttl{
+        padding-top: 100px;
+        font-size: 65px;
+        letter-spacing: 3px;
+        @mixin sp{
+            width: 90%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__arrow{
+        position: absolute;
+        bottom: 80px;
+        font-size: 30px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation-name: finger;
+    }
+}
+
+/*head-ttl*/
+.head-ttl{
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #fff;
+    @mixin sp{
+        font-size: 7vw;
+        padding-bottom: 5%;
+        border-bottom: 2px solid #fff;
+    }
+}
+
+/*date*/
+.date{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    @mixin sp{
+        width: 90%;
+    }
+    &__ttl{
+
+    }
+    &__txt{
+        padding-top: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        @mixin sp{
+            line-height: 1.6;
+            padding-top: 7%;
+        }
+    }
+    &__itm{
+        padding-top: 25px;
+        letter-spacing: 4px;
+        @mixin sp{
+            line-height: 1.6;
+            padding-top: 7%;
+        }
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+}
+
+/*date*/
+.food{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 200px;
+    @mixin sp{
+        width: 90%;
+    }
+    &__ttl{
+
+    }
+    &__txt{
+        padding-top: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        @mixin sp{
+            line-height: 1.6;
+            padding-top: 7%;
+        }
+    }
+    &__itm{
+        padding-top: 25px;
+        letter-spacing: 4px;
+        @mixin sp{
+            line-height: 1.6;
+            padding-top: 7%;
+        }
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+}
+
+/*prepare*/
+.prepare{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 200px;
+    @mixin sp{
+        width: 90%;
+    }
+    &__ttl{
+
+    }
+    &__txt{
+        padding-top: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
+    &__itm{
+        padding-top: 25px;
+        letter-spacing: 4px;
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+}
+
+/*footer*/
+.footer{
+    padding-top: 300px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    &__txt{
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+}

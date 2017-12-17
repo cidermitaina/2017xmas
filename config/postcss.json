@@ -1,0 +1,24 @@
+{
+  "use": [
+    "postcss-import",
+    "precss",
+    "autoprefixer",
+    "postcss-assets",
+    "postcss-utilities",
+    "postcss-discard-comments",
+    "css-mqpacker"
+  ],
+  "autoprefixer": {
+    "browsers": [
+      "ie >= 10",
+      "ios >= 8",
+      "android >= 4.0"
+    ]
+  },
+  "parser": "postcss-scss",
+  "postcss-assets": {
+    "basePath": "./public/",
+    "cachebuster": true,
+    "loadPaths": [ "img/" ]
+  }
+}
