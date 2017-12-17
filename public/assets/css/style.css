@@ -254,19 +254,30 @@ blockquote:before{
     border:none !important;
 }
 
-body{
-    overflow:hidden;
-}
-
 .bg{
     background-image:url(../../assets/img/bg.jpg);
     background-size:cover;
     position:fixed;
     height:100%;
-    width:100%
+    width:100%;
+    top:0
+
 }
 
-.bg:before{
+canvas{
+    height:100%;
+    position:fixed;
+    top:0;
+}
+
+.content{
+    height:100%;
+    width:100%;
+    top:2px;
+    position:relative
+}
+
+.content:before{
     content:' ';
     background-color:rgba(0,0,0,0.6);
     position:absolute;
@@ -276,24 +287,11 @@ body{
     left:0;
 }
 
-canvas{
-    height:100%;
-    position:relative;
-}
-
-.content{
-    position:fixed;
-    height:100%;
-    width:100%;
-    top:2px;
-    overflow-y:scroll;
-}
-
 .header{
     color:#fff;
     text-align:center;
     font-family:'Pacifico', cursive;
-    margin-top:60px;
+    padding-top:60px;
     height:100%;
     position:relative
 }
@@ -336,7 +334,8 @@ canvas{
 .date{
     width:80%;
     margin:0 auto;
-    padding-top:100px
+    padding-top:100px;
+    position:relative
 }
 
 .date__ttl{}
@@ -360,7 +359,8 @@ canvas{
 .food{
     width:80%;
     margin:0 auto;
-    padding-top:200px
+    padding-top:200px;
+    position:relative
 }
 
 .food__ttl{}
@@ -384,7 +384,8 @@ canvas{
 .prepare{
     width:80%;
     margin:0 auto;
-    padding-top:200px
+    padding-top:200px;
+    position:relative
 }
 
 .prepare__ttl{}
@@ -409,7 +410,8 @@ canvas{
     padding-top:300px;
     padding-bottom:20px;
     color:#fff;
-    text-align:center
+    text-align:center;
+    position:relative
 }
 
 .footer__txt{
