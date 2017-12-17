@@ -261,7 +261,9 @@ body{
 .bg{
     background-image:url(../../assets/img/bg.jpg);
     background-size:cover;
-    position:relative
+    position:fixed;
+    height:100%;
+    width:100%
 }
 
 .bg:before{
@@ -276,6 +278,7 @@ body{
 
 canvas{
     height:100%;
+    position:relative;
 }
 
 .content{
