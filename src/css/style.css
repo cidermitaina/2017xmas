@@ -29,15 +29,7 @@ canvas{
     height: 100%;
     position: fixed;
     top: 0;
-}
-
-/*content*/
-.content{
-    /*position: fixed;*/
-    height: 100%;
-    width: 100%;
-    top: 2px;
-    position: relative;
+    background-color: rgba(0,0,0,0.6);
     &:before{
         content: ' ';
         background-color: rgba(0,0,0,0.6);
@@ -47,6 +39,16 @@ canvas{
     	bottom: 0;
     	left: 0;
     }
+}
+
+/*content*/
+.content{
+    /*position: fixed;*/
+    height: 100%;
+    width: 100%;
+    top: 2px;
+    position: relative;
+
 }
 
 /*header*/

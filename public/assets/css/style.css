@@ -268,16 +268,10 @@ canvas{
     height:100%;
     position:fixed;
     top:0;
+    background-color:rgba(0,0,0,0.6)
 }
 
-.content{
-    height:100%;
-    width:100%;
-    top:2px;
-    position:relative
-}
-
-.content:before{
+canvas:before{
     content:' ';
     background-color:rgba(0,0,0,0.6);
     position:absolute;
@@ -285,6 +279,14 @@ canvas{
     right:0;
     bottom:0;
     left:0;
+}
+
+.content{
+    height:100%;
+    width:100%;
+    top:2px;
+    position:relative;
+
 }
 
 .header{
