@@ -9,7 +9,7 @@ _ _ _                      ,___
                   '
 M e r r y C h r i s t m a s ! ! ! ! !
 
- ---- 12.23.2017
+Yuya Yoshida , Yukari Yoshida , Mona , Kazuki Sato , Haruka Miura , Ayano Goto , Erika Kiku , Shiho Ishitoko ---- 12.23.2017
 
 -->
 <!--[if IE 6]> <html class="ie6"> <![endif]-->
@@ -36,6 +36,7 @@ M e r r y C h r i s t m a s ! ! ! ! !
 <!--css-->
 <link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <!--[if lt IE 10]>
@@ -47,89 +48,99 @@ M e r r y C h r i s t m a s ! ! ! ! !
 <body>
     <div class="bg">
     </div><!-- ./bg -->
-        <canvas id="xmas"></canvas>
-        <div class="content">
-            <header class="header">
-                <p class="header__txt">
-                    desr
-                </p>
-                <h1 class="header__ttl">
-                    <!-- Merry Christmas -->
-                    <img src="./assets/img/ttl.png" alt="">
-                </h1>
-                <p class="header__arrow">
-                    ↓
-                </p>
-            </header><!-- ./header -->
-            <section class="date">
-                <h2 class="date__ttl head-ttl">
-                    Date
-                </h2>
-                <ul class="date__txt ulList">
-                    <li class="date__itm">
-                        2017.12.23(Sat) 18:00~
-                    </li>
-                    <li class="date__itm">
-                        よしださん家
-                    </li>
-                    <li class="date__itm">
-                        副都心線地下鉄赤塚駅　<br class="spi">１番出口側改札　待ち合わせ
-                    </li>
-                </ul>
-            </section><!-- ./date -->
-            <section class="food">
-                <h2 class="food__ttl head-ttl">
-                    Food & Drink
-                </h2>
-                <ul class="food__txt">
+    <canvas id="xmas"></canvas>
+    <div class="content">
+        <header class="header">
+            <p class="header__txt">
+                desr
+            </p>
+            <h1 class="header__ttl">
+                <!-- Merry Christmas -->
+                <img src="./assets/img/ttl.png" alt="Merry Christmas">
+            </h1>
+            <div class="header__scrollWrap">
+                <a href="#date">
+                    <div class="header__mouse">
+                        <div class="header__scroll"></div>
+                    </div>
+                    <p class="header__scrollTxt">
+                        scroll
+                    </p>
+                </a>
+            </div>
+        </header><!-- ./header -->
+        <section class="date" id="date" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="date__ttl head-ttl">
+                Date
+            </h2>
+            <ul class="date__txt ulList">
+                <li class="date__itm">
+                    2017.12.23(Sat) 18:00~
+                </li>
+                <li class="date__itm">
+                    よしださん家
+                </li>
+                <li class="date__itm">
+                    副都心線地下鉄赤塚駅　<br class="spi">１番出口側改札　待ち合わせ
+                </li>
+            </ul>
+        </section><!-- ./date -->
+        <section class="food" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="food__ttl head-ttl">
+                Food & Drink
+            </h2>
+            <ul class="food__txt">
 
-                    <li class="food__itm">
-                        パン
-                    </li>
-                    <li class="food__itm">
-                        ごはん
-                    </li>
-                    <li class="food__itm">
-                        サラダ
-                    </li>
-                    <li class="food__itm">
-                        ローストビーフ
-                    </li>
-                    <li class="food__itm">
-                        メンチカツ
-                    </li>
-                    <li class="food__itm">
-                        シチュー
-                    </li>
-                    <li class="date__itm">
-                        ケーキ（クリスマスフルーツタルト）
-                    </li>
-                    <li class="food__itm">
-                        シャンパン
-                    </li>
-                    <li class="food__itm">
-                        その他　ドリンク
-                    </li>
-                </ul>
-            </section><!-- ./food -->
-            <section class="prepare">
-                <h2 class="prepare__ttl head-ttl">
-                    Things to prepare
-                </h2>
-                <ul class="prepare__txt">
-                    <li class="prepare__itm">
-                        ￥2500（会費）
-                    </li>
-                    <li class="prepare__itm">
-                        プレゼント（￥2000までのプレゼント）
-                    </li>
-                </ul>
-            </section><!-- ./prepare -->
-            <footer class="footer">
-                    <small class="footer__txt">2017 &copy; shiho</small>
-            </footer>
-        </div><!-- ./content -->
-
+                <li class="food__itm">
+                    パン
+                </li>
+                <li class="food__itm">
+                    ごはん
+                </li>
+                <li class="food__itm">
+                    サラダ
+                </li>
+                <li class="food__itm">
+                    ローストビーフ
+                </li>
+                <li class="food__itm">
+                    メンチカツ
+                </li>
+                <li class="food__itm">
+                    シチュー
+                </li>
+                <li class="date__itm">
+                    ケーキ<br class="spi">（クリスマスフルーツタルト）
+                </li>
+                <li class="food__itm">
+                    シャンパン
+                </li>
+                <li class="food__itm">
+                    その他　ドリンク
+                </li>
+            </ul>
+        </section><!-- ./food -->
+        <section class="prepare" data-aos="fade-up" data-aos-duration="2000">
+            <h2 class="prepare__ttl head-ttl">
+                Things to prepare
+            </h2>
+            <ul class="prepare__txt">
+                <li class="prepare__itm">
+                    ￥2500（会費）
+                </li>
+                <li class="prepare__itm">
+                    プレゼント<br class="spi">（￥2000までのプレゼント）
+                </li>
+            </ul>
+        </section><!-- ./prepare -->
+        <footer class="footer">
+                <small class="footer__txt">2017 &copy; shiho</small>
+        </footer>
+    </div><!-- ./content -->
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script type="text/javascript" src="assets/js/bundle.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

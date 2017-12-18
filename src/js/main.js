@@ -1,9 +1,12 @@
 import Snow from './lib/snow';
+import Scroll from './lib/scroll';
 import $ from 'jquery';
 
-const sample = new Snow();
+const snow = new Snow();
+const scroll = new Scroll();
 
-//snow
- $(document).ready(function(){
-    sample.initLetItSnow();
+//snow,smoothScroll
+$(function () {
+    snow.initLetItSnow();
+    scroll.smoothScroll();
 });

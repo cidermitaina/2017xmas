@@ -115,10 +115,10 @@ export default class Snow {
             snow();
         };
 
-        canvas.addEventListener("mousemove", function(e) {
-            mX = e.clientX,
-            mY = e.clientY
-        });
+        // canvas.addEventListener("mousemove", function(e) {
+        //     mX = e.clientX,
+        //     mY = e.clientY
+        // });
 
         window.addEventListener("resize",function(){
             canvas.width = window.innerWidth;

@@ -11257,6 +11257,51 @@ return jQuery;
 }));
 
 },{}],22:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var $ = require('jquery');
+
+var Scroll = function () {
+    function Scroll() {
+        (0, _classCallCheck3.default)(this, Scroll);
+
+        this.speed = 1000;
+    }
+
+    (0, _createClass3.default)(Scroll, [{
+        key: 'smoothScroll',
+        value: function smoothScroll() {
+            $('a[href^="#"] ').on('click', function () {
+                var speed = this.speed;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href === "" ? 'html' : href);
+                var position = target.offset().top;
+
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        }
+    }]);
+    return Scroll;
+}();
+
+exports.default = Scroll;
+
+},{"babel-runtime/helpers/classCallCheck":2,"babel-runtime/helpers/createClass":3,"jquery":21}],23:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11394,9 +11439,10 @@ var Snow = function () {
                 snow();
             };
 
-            canvas.addEventListener("mousemove", function (e) {
-                mX = e.clientX, mY = e.clientY;
-            });
+            // canvas.addEventListener("mousemove", function(e) {
+            //     mX = e.clientX,
+            //     mY = e.clientY
+            // });
 
             window.addEventListener("resize", function () {
                 canvas.width = window.innerWidth;
@@ -11411,12 +11457,16 @@ var Snow = function () {
 
 exports.default = Snow;
 
-},{"babel-runtime/helpers/classCallCheck":2,"babel-runtime/helpers/createClass":3,"jquery":21}],23:[function(require,module,exports){
+},{"babel-runtime/helpers/classCallCheck":2,"babel-runtime/helpers/createClass":3,"jquery":21}],24:[function(require,module,exports){
 'use strict';
 
 var _snow = require('./lib/snow');
 
 var _snow2 = _interopRequireDefault(_snow);
+
+var _scroll = require('./lib/scroll');
+
+var _scroll2 = _interopRequireDefault(_scroll);
 
 var _jquery = require('jquery');
 
@@ -11424,11 +11474,13 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var sample = new _snow2.default();
+var snow = new _snow2.default();
+var scroll = new _scroll2.default();
 
-//snow
-(0, _jquery2.default)(document).ready(function () {
-  sample.initLetItSnow();
+//snow,smoothScroll
+(0, _jquery2.default)(function () {
+    snow.initLetItSnow();
+    scroll.smoothScroll();
 });
 
-},{"./lib/snow":22,"jquery":21}]},{},[23]);
+},{"./lib/scroll":22,"./lib/snow":23,"jquery":21}]},{},[24]);

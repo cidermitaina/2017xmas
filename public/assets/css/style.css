@@ -254,6 +254,10 @@ blockquote:before{
     border:none !important;
 }
 
+html{
+    height:100%;
+}
+
 .bg{
     background-image:url(../../assets/img/bg.jpg);
     background-size:cover;
@@ -268,10 +272,12 @@ canvas{
     height:100%;
     position:fixed;
     top:0;
-    background-color:rgba(0,0,0,0.6)
+    background-color:rgba(0,0,0,0.6);
+    z-index:1
+
 }
 
-canvas:before{
+canvas:after{
     content:' ';
     background-color:rgba(0,0,0,0.6);
     position:absolute;
@@ -286,7 +292,7 @@ canvas:before{
     width:100%;
     top:2px;
     position:relative;
-
+    z-index:2;
 }
 
 .header{
@@ -308,20 +314,57 @@ canvas:before{
 }
 
 .header__ttl{
-    padding-top:100px;
     font-size:65px;
     letter-spacing:3px;
+    top:38%;
+    -webkit-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+    position:absolute;
+    left:50%;
 }
 
-.header__arrow{
+.header__scrollWrap{
     position:absolute;
     bottom:80px;
-    font-size:30px;
     left:50%;
     -webkit-transform:translate(-50%,-50%);
             transform:translate(-50%,-50%);
     -webkit-animation-name:finger;
             animation-name:finger;
+}
+
+.header__scrollWrap a{
+    color:#fff;
+}
+
+.header__mouse{
+    width:22px;
+    height:42px;
+    bottom:40px;
+    left:50%;
+    border-radius:15px;
+    border:2px solid #fff;
+    -webkit-animation:intro 1s;
+            animation:intro 1s;
+    margin:0 auto;
+}
+
+.header__scroll{
+    display:block;
+    width:3px;
+    height:3px;
+    margin:6px auto;
+    border-radius:4px;
+    background:#fff;
+    -webkit-animation:finger 1s infinite;
+            animation:finger 1s infinite;
+}
+
+.header__scrollTxt{
+    font-family:"YuGothic","游ゴシック","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","ヒラギノ丸ゴ Pro W4","Hiragino Maru Gothic Pro","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+    padding-top:10px;
+    text-align:center;
+    letter-spacing:1.5px;
 }
 
 .head-ttl{
@@ -346,7 +389,7 @@ canvas:before{
     padding-top:40px;
     text-align:center;
     color:#fff;
-    font-size:14px;
+    font-size:15px;
 }
 
 .date__itm{
@@ -371,7 +414,7 @@ canvas:before{
     padding-top:40px;
     text-align:center;
     color:#fff;
-    font-size:14px;
+    font-size:15px;
 }
 
 .food__itm{
@@ -396,7 +439,7 @@ canvas:before{
     padding-top:40px;
     text-align:center;
     color:#fff;
-    font-size:14px;
+    font-size:15px;
 }
 
 .prepare__itm{
@@ -419,6 +462,54 @@ canvas:before{
 .footer__txt{
     font-size:13px;
     letter-spacing:2px;
+}
+
+@-webkit-keyframes intro{
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(40px);
+                transform:translateY(40px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0);
+                transform:translateY(0);
+    }
+}
+
+@keyframes intro{
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(40px);
+                transform:translateY(40px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0);
+                transform:translateY(0);
+    }
+}
+
+@-webkit-keyframes finger{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translateY(20px);
+                transform:translateY(20px);
+    }
+}
+
+@keyframes finger{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translateY(20px);
+                transform:translateY(20px);
+    }
 }
 
 @media print, screen and (max-width: 640px){
@@ -456,6 +547,14 @@ canvas:before{
         width:100%;
     }
 
+    .header__scrollWrap{
+        bottom:7%;
+    }
+
+    .header__scrollTxt{
+        font-size:3.5vw;
+    }
+
     .head-ttl{
         font-size:7vw;
         padding-bottom:5%;
@@ -469,6 +568,7 @@ canvas:before{
     .date__txt{
         line-height:1.6;
         padding-top:7%;
+        font-size:3.5vw;
     }
 
     .date__itm{
@@ -483,6 +583,7 @@ canvas:before{
     .food__txt{
         line-height:1.6;
         padding-top:7%;
+        font-size:3.5vw;
     }
 
     .food__itm{
@@ -492,5 +593,20 @@ canvas:before{
 
     .prepare{
         width:90%;
+    }
+
+    .prepare__txt{
+        line-height:1.6;
+        padding-top:7%;
+        font-size:3.5vw;
+    }
+
+    .prepare__itm{
+        line-height:1.6;
+        padding-top:7%;
+    }
+
+    .footer__txt{
+        font-size:3vw;
     }
 }
