@@ -64,6 +64,9 @@ canvas{
     padding-top: 60px;
     height: 100%;
     position: relative;
+    @mixin sp{
+        padding-top: 8%;
+    }
     &__txt{
         font-size: 40px;
         letter-spacing: 2px;

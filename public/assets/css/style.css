@@ -534,6 +534,10 @@ canvas:after{
         background-position:center top;
     }
 
+    .header{
+        padding-top:8%;
+    }
+
     .header__txt{
         font-size:8vw;
     }
